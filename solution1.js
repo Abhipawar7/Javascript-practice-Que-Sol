@@ -3,20 +3,36 @@
 
 // solution :
 
+// let array = ['alexanderarnold', 'samuelmitchek', 'amendasarsew', 'nesta', 'camuel', 'si', 'palomaswetchenigher'];
+// let sortedarray = [];
+// for (student of array) {
+//     if (student.length < 6) {
+//         sortedarray.push('Gryffindor');
+//     }
+//     else if (student.length < 8) {
+//         sortedarray.push('Hufflepuff');
+//     }
+//     else if (student.length < 12) {
+//         sortedarray.push('Ravenclaw');
+//     }
+//     else {
+//         sortedarray.push('Slytherin');
+//     }
+// };
+// console.log(sortedarray);
+
+//Optimised solution using :
+
 let array = ['alexanderarnold', 'samuelmitchek', 'amendasarsew', 'nesta', 'camuel', 'si', 'palomaswetchenigher'];
-let sortedarray = [];
-for (student of array) {
-    if (student.length < 6) {
-        sortedarray.push('Gryffindor');
-    }
-    else if (student.length < 8) {
-        sortedarray.push('Hufflepuff');
-    }
-    else if (student.length < 12) {
-        sortedarray.push('Ravenclaw');
-    }
-    else {
-        sortedarray.push('Slytherin');
-    }
+function assignhome(student) {
+    const len = student.length;
+    if (len < 6) return ('Gryffindor');
+    if (len < 8) return ('Hufflepuff');
+    if (len < 12) return ('Ravenclaw');
+    return ('Slytherin');
 };
+let sortedarray = array.map(assignhome);
 console.log(sortedarray);
+
+
+
